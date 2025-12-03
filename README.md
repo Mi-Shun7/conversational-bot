@@ -24,4 +24,4 @@ This is a simple bot that offers three things:
 <img width="1207" height="660" alt="Screenshot 2025-12-03 at 8 59 36 PM" src="https://github.com/user-attachments/assets/f339d9ee-7978-4e6f-9c9e-61eefe5d5072" />
 
 ## 🔗 Link to website
-<a href= "https://mi-shun7.github.io/conversational-bot/" /a>
+https://mi-shun7.github.io/conversational-bot/
