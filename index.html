@@ -4,32 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Canada Tour Guide Bot – Powered by Botpress</title>
-  
-  <nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="/canada-flag.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-      Normatech
-    </a>
-  </div>
-  </nav>
-  
-  <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
-  <style>
-  #webchat .bpWebchat {
-  position: unset;
-  width: 100%;
-  height: 100%;
-  max-height: 100%;
-  max-width: 100%;
-  }
-  
-  #webchat .bpFab {
-  display: none;
-  }
-  </style>
 
-  <div id="webchat" style="width: 500px; height: 500px;"></div>
+  <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
 
   <style>
     body {
@@ -37,34 +13,73 @@
       background: #f5f7fa;
       margin: 0;
       padding: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      width: 100%;
+      height: 60px;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       display: flex;
+      align-items: center;
+      padding: 0 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .navbar img {
+      margin-right: 10px;
+    }
+
+    /* Welcome section */
+    .container {
+      margin-top: 120px; /* ensures content appears below navbar */
+      display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      text-align: center;
     }
 
-  
-    h1 {
-      margin-center: 10px;
-      color: #333;
+    /* Webchat container */
+    #webchat .bpWebchat {
+      position: unset;
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+      max-width: 100%;
     }
 
-    p {
-      color: #555;
-      margin-center: 25px;
+    #webchat .bpFab {
+      display: none;
     }
 
+    #webchat {
+      width: 500px;
+      height: 500px;
+      margin: 40px auto;
+    }
   </style>
 </head>
 
 <body>
+  <!-- Navbar now placed correctly -->
+  <nav class="navbar">
+    <img src="/canada-flag.png" alt="Flag" width="30" height="24" />
+    <span style="font-size: 20px; font-weight: 600;">Normatech</span>
+  </nav>
+
+  <!-- Centered welcome content -->
   <div class="container">
     <h1>Welcome to the Norma Tours Bot</h1>
     <p>Your friendly tour guide. Ask about today’s weather in Canada!</p>
 
-    <!-- <button class="btn open-btn" onclick="window.botpressWebChat.open()">Open Chat</button>
-    <button class="btn close-btn" onclick="window.botpressWebChat.close()">Close Chat</button> -->
+    <div id="webchat"></div>
   </div>
+
 
   <!-- Botpress Webchat Script -->
   <script>
