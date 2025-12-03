@@ -1,15 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Canada Tours</title>
-  <script src="https://cdn.botpress.cloud/webchat/v3.4/inject.js"></script>
-  <script src="https://files.bpcontent.cloud/2025/12/01/17/20251201170500-IM82E1JK.js" defer></script>
-</head>
-<body>
-  <h2>Welcome to the Canadian Tour Guide</h2>
-  <p>Your friendly guide for fun facts, news, and weather tips.</p>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canada Tour Guide Bot – Powered by Botpress</title>
 
+  <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
+  <style>
+  #webchat .bpWebchat {
+  position: unset;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  }
   
-    
+  #webchat .bpFab {
+  display: none;
+  }
+  </style>
+
+  <div id="webchat" style="width: 500px; height: 500px;"></div>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .open-btn {
+      background: #0078ff;
+      color: white;
+    }
+
+    .open-btn:hover {
+      background: #005fcc;
+    }
+
+    .close-btn {
+      background: #ff4b4b;
+      color: white;
+    }
+
+    .close-btn:hover {
+      background: #cc3a3a;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Welcome to the Norma Tours Bot</h1>
+    <p>Your friendly tour guide. Ask about today’s weather in Canada!</p>
+
+    <button class="btn open-btn" onclick="window.botpressWebChat.open()">Open Chat</button>
+    <button class="btn close-btn" onclick="window.botpressWebChat.close()">Close Chat</button>
+  </div>
+
+  <!-- Botpress Webchat Script -->
+  <script>
+  window.botpress.on("webchat:ready", () => {
+  window.botpress.open();
+  });
+  window.botpress.init({
+  "botId": "81e16047-ffa9-4e97-8fbb-6226fbcf9b90",
+  "configuration": {
+  "version": "v2",
+  "composerPlaceholder": "",
+  "botName": "Norma",
+  "botDescription": "Personalized City Guide",
+  "website": {},
+  "email": {},
+  "phone": {},
+  "termsOfService": {},
+  "privacyPolicy": {},
+  "color": "#eb3131",
+  "variant": "solid",
+  "headerVariant": "glass",
+  "themeMode": "light",
+  "fontFamily": "inter",
+  "radius": 4,
+  "feedbackEnabled": false,
+  "footer": "⚡ by Botpress",
+  "soundEnabled": false,
+  "proactiveMessageEnabled": false,
+  "proactiveBubbleMessage": "Hi! 👋 Need help?",
+  "proactiveBubbleTriggerType": "afterDelay",
+  "proactiveBubbleDelayTime": 10
+  },
+  "clientId": "ddbb95d8-8fef-4762-9570-0217bfa8c702",
+  "selector": "#webchat"
+  });
+  </script>
 </body>
 </html>
