@@ -84,71 +84,67 @@
   <!-- Botpress Webchat Script -->
   <script>
   
-<!-- In your <head> tag -->
-<script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
-<style>
-  #webchat .bpWebchat {
-    position: unset;
-    width: 100%;
-    height: 100%;
-    max-height: 100%;
-    max-width: 100%;
-  }
+    <style>
+      #webchat .bpWebchat {
+        position: unset;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        max-width: 100%;
+      }
+    
+      #webchat .bpFab {
+        display: none;
+      }
+    </style>
 
-  #webchat .bpFab {
-    display: none;
-  }
-</style>
-
-<!-- Put this on your page BEFORE the script below -->
-<div id="webchat" style="width: 500px; height: 500px;"></div>
-
-<!-- In your <body> tag -->
-<script>
-  window.botpress.on("webchat:ready", () => {
-    window.botpress.open();
-  });
-  window.botpress.init({
-    "botId": "1547624a-d928-4fd2-a951-24443bb99f41",
-    "configuration": {
-      "version": "v2",
-      "composerPlaceholder": "type here",
-      "botName": "Norma",
-      "botAvatar": "https://files.bpcontent.cloud/2025/12/03/23/20251203234141-H8FJCWA8.png",
-      "botDescription": "Canadian Tour Guide Bot",
-      "website": {
-        "title": "https://mi-shun7.github.io/conversational-bot/#",
-        "link": "https://mi-shun7.github.io/conversational-bot/#"
-      },
-      "email": {
-        "title": "normatech@outlook.com",
-        "link": "normatech@outlook.com"
-      },
-      "phone": {
-        "title": "555-123-456",
-        "link": "555-123-456"
-      },
-      "termsOfService": {},
-      "privacyPolicy": {},
-      "color": "#ff0a0a",
-      "variant": "solid",
-      "headerVariant": "glass",
-      "themeMode": "light",
-      "fontFamily": "Inter",
-      "radius": 4,
-      "feedbackEnabled": false,
-      "footer": "[⚡ by Botpress](https://botpress.com/?from=webchat)",
-      "soundEnabled": false,
-      "toggleChatId": "bp-toggle-chat",
-      "proactiveMessageEnabled": false,
-      "proactiveBubbleMessage": "Hi! 👋 Need help?",
-      "proactiveBubbleTriggerType": "afterDelay",
-      "proactiveBubbleDelayTime": 10
-    },
-    "clientId": "b1ed5963-9c4e-4538-a6c0-f447b1514633",
-    "selector": "#webchat"
-  });
-</script>
+    <div id="webchat" style="width: 500px; height: 500px;"></div>
+    
+    <script>
+      window.botpress.on("webchat:ready", () => {
+        window.botpress.open();
+      });
+      window.botpress.init({
+        "botId": "1547624a-d928-4fd2-a951-24443bb99f41",
+        "configuration": {
+          "version": "v2",
+          "composerPlaceholder": "type here",
+          "botName": "Norma",
+          "botAvatar": "https://files.bpcontent.cloud/2025/12/03/23/20251203234141-H8FJCWA8.png",
+          "botDescription": "Canadian Tour Guide Bot",
+          "website": {
+            "title": "https://mi-shun7.github.io/conversational-bot/#",
+            "link": "https://mi-shun7.github.io/conversational-bot/#"
+          },
+          "email": {
+            "title": "normatech@outlook.com",
+            "link": "normatech@outlook.com"
+          },
+          "phone": {
+            "title": "555-123-456",
+            "link": "555-123-456"
+          },
+          "termsOfService": {},
+          "privacyPolicy": {},
+          "color": "#ff0a0a",
+          "variant": "solid",
+          "headerVariant": "glass",
+          "themeMode": "light",
+          "fontFamily": "Inter",
+          "radius": 4,
+          "feedbackEnabled": false,
+          "footer": "[⚡ by Botpress](https://botpress.com/?from=webchat)",
+          "soundEnabled": false,
+          "toggleChatId": "bp-toggle-chat",
+          "proactiveMessageEnabled": false,
+          "proactiveBubbleMessage": "Hi! 👋 Need help?",
+          "proactiveBubbleTriggerType": "afterDelay",
+          "proactiveBubbleDelayTime": 10
+        },
+        "clientId": "b1ed5963-9c4e-4538-a6c0-f447b1514633",
+        "selector": "#webchat"
+      });
+  </script>
 
 </body>
 </html>
